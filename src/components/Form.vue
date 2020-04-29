@@ -1,4 +1,4 @@
-<template>
+=<template>
   <div>
     <div class="container" v-if="english">
       <b-jumbotron header="Immigration Resource Form" lead="Last Updated: 04/28/2020" class="mt-3">
@@ -989,7 +989,6 @@
         this.english = false
         this.spanish = true
       },
-      // TODO: strength of candidate
       onSubmit(evt) {
         evt.preventDefault()
 
@@ -1117,25 +1116,39 @@
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.deported= null
-        this.immCourt= null
-        this.beenStopped=null
-        this.parentUS=null
+        this.english= true
+        this.spanish = false
+        this.age = ''
+        this.household = 4
+        this.incomeLevel = ''
+        this.insured = null
+        this.edLevel = ''
+        this.specialSkills = null
+        this.unlawfulEntry = null
+        this.threeBar = null
+        this.tenBar = null
+        this.permBar = null
+        this.detained = null
+        this.parentUS = null
         this.married = null
-        this.marriedDate = null
-        this.marriedUSA = null
+        this.spouseStatus = ''
         this.children = null
+        this.childUSC = null
+        this.sibUSC = null
+        this.parentLPR = null
         this.arrested = null
         this.wantAsylum = null
+        this.warrantAsylum = null
         this.domAbuse = null
+        this.abuserUSC = null
+        this.threatenerUSC = null
         this.domThreat = null
         this.vicCrime = null
         this.reportedCrime = null
         this.recruitWork = null
         this.trickedToWork = null
         this.exploited = null
-        this.filedOnBehalf = null
-        this.results = []
+        this.neglected = null
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
