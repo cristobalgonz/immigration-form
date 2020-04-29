@@ -1116,8 +1116,6 @@
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.english= true
-        this.spanish = false
         this.age = ''
         this.household = 4
         this.incomeLevel = ''
